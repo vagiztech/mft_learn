@@ -1,0 +1,11 @@
+import numpy as np
+import pandas as pd
+
+# Загрузим датасет
+df = pd.read_csv('police.csv')
+column_with_most_nulls = None
+# Найдем колонку с наибольшим количеством пропусков
+column_with_most_nulls = df.isnull().sum().idxmax()
+column_with_most_nulls
+print(column_with_most_nulls)
+
